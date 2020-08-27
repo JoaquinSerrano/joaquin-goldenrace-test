@@ -63,12 +63,24 @@ form.addEventListener("submit", function (e) {
 });
 
 mail.addEventListener("focusout", function () {
+  let existError = document.querySelector(".error-message");
   if (mail.value === "") {
     mailContainer.children[0].classList.remove("input-email-ok");
   }
 
+  if (mailRegex.test(mail.value) === false && !existError) {
+    let errorMessage =
+      "Your email address must be in the format of name@domain.com";
+    let errorContainer = document.createElement("p");
+    errorContainer.classList.add("error-message");
+    errorContainer.innerHTML = errorMessage;
+    mail.after(errorContainer);
+    mailContainer.children[0].classList.remove("input-email-ok");
+    return false;
+  }
+
   if (mailRegex.test(mail.value) === true) {
-    let existError = document.querySelector(".error-message");
+    //let existError = document.querySelector(".error-message");
     mailContainer.children[0].classList.add("input-email-ok");
     if (existError) {
       existError.remove();
