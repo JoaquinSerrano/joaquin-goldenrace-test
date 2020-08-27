@@ -1,0 +1,22 @@
+.button {
+  width: 17.5rem;
+  height: 4.8rem;
+  font-family: "Open-Sans-Regular", sans-serif;
+  font-size: 1.6rem;
+  background: $ocre-30;
+  border: 1px solid $ocre-10;
+  color: $white;
+  cursor: pointer;
+}
+
+.button-success {
+  background: $green;
+}
+
+.button:hover {
+  background: $ocre-20;
+}
+
+.button:focus {
+  outline: 0;
+}

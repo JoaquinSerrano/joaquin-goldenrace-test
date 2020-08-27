@@ -1,0 +1,48 @@
+.box-input {
+  display: block;
+  width: 100%;
+  border: 1px solid $gray-20;
+  border-radius: 0.2rem;
+  font-family: "Open-Sans-Semibold", sans-serif;
+  font-size: 1.6rem;
+  color: $gray-40;
+  padding: 1.6rem 1.2rem;
+  outline: none;
+}
+.box-textarea {
+  @extend .box-input;
+  height: 20rem;
+}
+
+.box-input:focus {
+  border: 1px solid $ocre-30;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $gray-20;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: $gray-20;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: $gray-20;
+}
+
+.input-email-ok {
+  background: $white url("../img/icon-contact-ok.svg") no-repeat;
+  background-position: calc(100% - 1rem) center;
+}
+
+.error-message {
+  color: $red;
+  font-size: 1.1rem;
+  padding: 1rem 0;
+  margin: 0 1rem;
+  border-bottom: 1px solid $gray-20;
+}
