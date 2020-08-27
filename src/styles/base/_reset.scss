@@ -60,3 +60,8 @@ input:-webkit-autofill:active {
 input:invalid {
   box-shadow: none;
 }
+
+input:required,
+textarea:required {
+  box-shadow: none;
+}
